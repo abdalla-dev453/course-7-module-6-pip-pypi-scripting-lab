@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 def generate_log(data):
     # 1. Validate input
     if not isinstance(data, list):
@@ -22,9 +21,9 @@ def generate_log(data):
 
 
 if __name__ == "__main__":
-    sample_data = [
+    log_data = [
         "User logged in",
         "User updated profile",
         "Report exported"
     ]
-    generate_log(sample_data)
+    generate_log(log_data)
