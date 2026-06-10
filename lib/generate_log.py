@@ -3,11 +3,6 @@ import requests
 
 
 def generate_log(log_data):
-    """
-    Creates a log file from a list of log entries.
-    Returns the filename.
-    """
-
     if not isinstance(log_data, list):
         raise ValueError("log_data must be a list")
 
@@ -15,7 +10,9 @@ def generate_log(log_data):
 
     with open(filename, "w") as file:
         for entry in log_data:
-            file.write(f"{entry}\n")
+            file.write(entry + "\n")
+
+    print(f"Log written to {filename}")
 
     return filename
 
